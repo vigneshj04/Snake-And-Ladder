@@ -5,7 +5,8 @@ public class SnakeAndLadder {
         int playerPosition = 0;
         final int LADDER = 2;
         final int SNAKE = 1;
-        while (playerPosition <= 100) {
+
+        while (playerPosition < 100) {
             int dieRolls = (int) Math.floor((Math.random() * 10) % 6 + 1);
             int option = (int) Math.floor((Math.random() * 10) % 3);
             switch (option) {
@@ -24,14 +25,16 @@ public class SnakeAndLadder {
                     System.out.println("Option is ...... " + option);
                     playerPosition = playerPosition + dieRolls;
                     System.out.println("Got a Ladder & Your Position Goes to " + playerPosition);
-                    if (playerPosition >= 100) {
+                    if (playerPosition > 100) {
                         playerPosition = playerPosition - dieRolls;
                         System.out.println("Player position is Same " + playerPosition);
                     }
                     break;
                 default:
+                    dieRolls++;
             }
             playerPosition++;
+            System.out.println("count ="+ dieRolls);
         }
     }
 }
