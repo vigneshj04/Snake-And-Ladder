@@ -2,7 +2,6 @@
 public class SnakeAndLadder {
 
     public static void main(String[] args) {
-        int Player;
         int playerPosition = 0;
         final int LADDER = 2;
         final int SNAKE = 1;
@@ -26,7 +25,7 @@ public class SnakeAndLadder {
                     playerPosition = playerPosition + dieRolls;
                     System.out.println("Got a Ladder & Your Position Goes to " + playerPosition);
                     if (playerPosition >= 100)  {
-                        playerPosition = 100;
+                        playerPosition = playerPosition - dieRolls;
                         System.out.println("Player position is Same " +playerPosition);
                     }
                     break;
