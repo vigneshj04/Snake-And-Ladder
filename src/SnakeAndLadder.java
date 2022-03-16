@@ -15,7 +15,8 @@ public class SnakeAndLadder {
                     System.out.println("Option is ...... " + option);
                     playerPosition = playerPosition - dieRolls;
                     System.out.println("You got a bite by Snake & Your Position Goes to " + playerPosition);
-                    if (playerPosition == 0)  {
+                    if (playerPosition <= 0)  {
+                        playerPosition = 0;
                         System.out.println("Player position is Same " +playerPosition);
                     }
                     break;
@@ -24,6 +25,10 @@ public class SnakeAndLadder {
                     System.out.println("Option is ...... " + option);
                     playerPosition = playerPosition + dieRolls;
                     System.out.println("Got a Ladder & Your Position Goes to " + playerPosition);
+                    if (playerPosition >= 100)  {
+                        playerPosition = 100;
+                        System.out.println("Player position is Same " +playerPosition);
+                    }
                     break;
                 default:
             }
